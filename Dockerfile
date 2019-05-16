@@ -1,15 +1,16 @@
 # Pull base image.
-FROM library/node
+FROM node
 MAINTAINER Jose Carrillo <quique0194@gmail.com>
 
 # Install Grunt
 RUN npm install -g grunt-cli
-RUN npm install -g grunt
-RUN npm install -g grunt-contrib-concat
-RUN npm install -g grunt-contrib-copy
-RUN npm install -g grunt-contrib-cssmin
-RUN npm install -g grunt-contrib-htmlmin
-RUN npm install -g grunt-contrib-uglify
+RUN npm install grunt
+RUN npm install grunt-contrib-concat
+RUN npm install grunt-contrib-copy
+RUN npm install grunt-contrib-cssmin
+RUN npm install grunt-contrib-htmlmin
+RUN npm install grunt-contrib-uglify
+RUN npm install grunt-contrib-watch
 
 # Define working directory.
 WORKDIR /data
