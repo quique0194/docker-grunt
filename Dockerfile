@@ -1,6 +1,5 @@
 # Pull base image.
-FROM node:12.15.0-alpine3.11
-MAINTAINER Jose Carrillo <quique0194@gmail.com>
+FROM node:20.12.0-alpine3.18
 
 # Define working directory.
 WORKDIR /workdir
@@ -16,6 +15,8 @@ RUN npm install -g grunt-cli \
     && npm install grunt-contrib-uglify-es \
     && npm install grunt-contrib-watch \
     && npm install grunt-env
+
+RUN apk add --no-cache aws-cli
 
 # Define default command.
 CMD ["sh"]

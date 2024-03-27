@@ -6,13 +6,13 @@ Originally created for bitbucket pipeline usage
 
 # Build
 
-	docker build -t awscli_grunt:latest .
+	docker build -t quique0194/awscli_grunt:latest .
 
 # Run
 
 In your $(pwd), create a link to parent node_modules, so that the docker image can use its preinstalled modules:
 
-	ln -s ../node_modules node_modules 
+	ln -s /workdir/node_modules node_modules
 
 Then you can run grunt like so:
 
