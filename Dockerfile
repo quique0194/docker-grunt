@@ -1,5 +1,5 @@
 # Pull base image.
-FROM node
+FROM node:12.15.0-alpine3.11
 MAINTAINER Jose Carrillo <quique0194@gmail.com>
 
 # Install Grunt
